@@ -5,11 +5,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
 
@@ -28,3 +25,8 @@ jobs:
         ignore-unfixed: true
         vuln-type: 'os,library'
         severity: 'HIGH,CRITICAL'
+
+    - name: HTMLLint
+      run: |
+        npm install -g htmllint
+        htmllint src/index.html
