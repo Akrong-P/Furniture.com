@@ -1,0 +1,9 @@
+
+{
+  "scripts": {
+    "lint-html": "htmllint src/index.html"
+  },
+  "devDependencies": {
+    "htmllint": "^0.8.0"
+  }
+}
