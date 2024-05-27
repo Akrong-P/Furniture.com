@@ -28,5 +28,5 @@ jobs:
 
     - name: Lint HTML files
       run: |
-        npm install @linthtml/linthtml --save-dev
+        chmod +x node_modules/.bin/linthtml   # Ensure executable permissions
         npx linthtml src/index.html
