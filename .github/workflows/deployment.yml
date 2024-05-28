@@ -1,6 +1,6 @@
 
 apiVersion: apps/v1
-kind: Deployment
+kind: Furniture App Deployment
 metadata:
   name: furniture-app-deployment
   labels:
