@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: furniture-app-deployment
+  labels:
+    app: furniture-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: furniture-app
+  template:
+    metadata:
+      labels:
+        app: furniture-app
+    spec:
+      containers:
+      - name: furniture-app-container
+        image: 381492230049.dkr.ecr.us-east-1.amazonaws.com/furniture-repository:latest
+        ports:
+        - containerPort: 80
